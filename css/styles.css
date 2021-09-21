@@ -2,16 +2,16 @@
 *{
     margin: 0px;
     padding: 0px;
-
     box-sizing: border-box;
 }
+
 
 /*Navigation Bar Styling for Desktop Screens*/
 nav{
     display: flex;
     justify-content: space-around;
     min-height: 8vh;
-    background-color: #000000dc;
+    background-color:rgba(21, 20, 20, 0.926);
     font-family: 'Ubuntu', sans-serif;
     align-items: center;
 }
@@ -84,13 +84,13 @@ nav{
         right: 0px;
         height: 92vh;
         top: 8vh;
-        background-color: #000000dc;
+        background-color: crimson;
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100%;
         transform: translateX(100%);
-        z-index: 999;
+        z-index: 1000;
 
     }
 
@@ -101,6 +101,17 @@ nav{
     .nav_mob{
         display: block;
         cursor: pointer;
+    }
+
+    footer{
+        flex-direction: column;
+    }
+    .menu_footer{
+        flex-basis: 100%;
+    }
+
+    .logo_footer{
+        display: none;
     }
 
 }
@@ -132,14 +143,92 @@ nav{
     transform: rotate(45deg) translate(-5px,-6px);
 }
 
+/*Footer Styling*/
+footer{
+    display: flex;
+    justify-content: space-around;
+    min-height: 10vh;
+    background-color: crimson;
+    font-family: 'Ubuntu', sans-serif;
+    align-items: center;
+}
+
+.logo_footer{
+    color: white;
+    letter-spacing: 2px;
+    font-size: 2rem;
+    width: 20%;
+}
+
+.logo_footer span{
+    color: rgb(27,27,27);
+}
+
+.menu_footer{
+    display: flex;
+    justify-content: space-around;
+    width: 10%;
+    color: white;
+    font-size: 1.75rem;
+    width: 10%;
+}
+
+.menu_footer li{
+    list-style: none;
+}
+
+.menu_footer a{
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    
+}
+
+.menu_footer a:hover{
+    color: black;
+}
+
+.contact_footer{
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.contact_footer li{
+    list-style: none;
+}
+
+.contact_footer a{
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.contact_footer a:hover{
+    color: black;
+}
+
+
+
 /* home section styling */
-.row{
+.row_r{
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-family: 'Ubuntu', sans-serif;
     height: 80vh;
-    background-color: rgb(27, 27, 27);
+    background-color: rgb(27,27,27);
+}
+
+.row_b{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Ubuntu', sans-serif;
+    height: 80vh;
+    background-color: #fff;
 }
 
 .col-1{
@@ -161,7 +250,7 @@ nav{
 }
 
 .col-1 h2 span{
-    color: crimson;
+    color: aqua;
 }
 
 .space {
@@ -170,13 +259,20 @@ nav{
     margin: 5px;
 }
 
+.col-2{
+    flex-basis: 50%;
+    position: relative; 
+    z-index: 999;
+    margin-right: 75px;
+}
+
 button{
     width: 250px;
     border: 0;
     padding: 5px;
     color:#fff;
     outline: none;
-    background:linear-gradient(to right, red, crimson);
+    background:linear-gradient(to right,red, crimson);
     border-radius: 10px;
     cursor: pointer;
     margin: 50px;
@@ -198,6 +294,17 @@ button{
     top: 30px;
 }
 
+.tagcloud {
+    font-family: 'Ubuntu', sans-serif;  
+    font-size: 20px;
+    margin: auto;
+    width: 50%;
+    color: #fff;
+  }
+  .tagcloud--item:hover {
+    color: aqua;
+  }
+
 /* Rohan Styles*/
 .word {
     font-family: 'Ubuntu', sans-serif;
@@ -208,8 +315,8 @@ button{
 .word span {
 	cursor: pointer;
 	display: inline-block;
-	font-size: 80px;
 	user-select: none;
+    font-size: 80px;
 	line-height: .8;
 }
 
@@ -232,7 +339,7 @@ button{
 .word span:nth-child(2).active{
 	animation: shrinkjump 0.75s ease-in-out;
 	transform-origin: bottom center;
-    color: crimson;
+    color: aqua;
 }
 
 @keyframes shrinkjump {
@@ -283,7 +390,7 @@ button{
 
 .word span:nth-child(4).active{
 	animation: rotate 1s ease-out;
-    color: crimson;
+    color: aqua;
 }
 
 @keyframes rotate {
@@ -311,8 +418,19 @@ button{
 	}
 }
 
-.word span:nth-child(6){
-	color: rgb(27, 27, 27);
+.word span:nth-child(6).active{
+	animation: rotate 1s ease-out;
+    color: crimson;
+}
+
+@keyframes rotate {
+	20%, 80% {
+		transform: rotateY(180deg);
+	}
+	
+	100% {
+		transform: rotateY(360deg);
+	}
 }
 
 .word span:nth-child(7).active {
@@ -334,7 +452,7 @@ button{
 .word span:nth-child(8).active {
 	animation: balance 1.5s ease-out;
 	transform-origin: bottom left;
-    color: crimson;
+    color: aqua;
 }
 
 @keyframes balance {
@@ -343,7 +461,7 @@ button{
 	}
 	
 	30%, 60% {
-		transform: rotate(-45deg);
+		transform: rotateY(45deg);
 	}
 }
 
@@ -381,7 +499,7 @@ button{
 
 .word span:nth-child(10).active{
 	animation: rotate 1s ease-out;
-    color: crimson;
+    color: aqua;
 }
 
 @keyframes rotate {
@@ -420,6 +538,43 @@ button{
     color: crimson;
 }
 
+.word span:nth-child(13).active {
+	animation: balance 1.5s ease-out;
+	transform-origin: bottom left;
+    color: crimson;
+}
+
+@keyframes balance {
+	0%, 100% {
+		transform: rotate(0deg);
+	}
+	
+	30%, 60% {
+		transform: rotate(-45deg);
+	}
+}
+
+.word span:nth-child(14).active{
+	animation: shrinkjump 0.75s ease-in-out;
+	transform-origin: bottom center;
+    color: crimson;
+}
+
+@keyframes shrinkjump {
+	10%, 35% {
+		transform: scale(2, .2) translate(0, 0);
+	}
+	
+	45%, 50% {
+		transform: scale(1) translate(0, -150px);
+	}
+	
+	80% {
+		transform: scale(1) translate(0, 0);
+	}
+}
+
+
 @keyframes falling {
 	12% {
 		transform: rotateX(240deg);
@@ -449,39 +604,201 @@ button{
 @media screen and (max-width:775px) {
 
 
+    .row_r{
+        flex-direction: column;
+    }
+
     .word span{
-        font-size: 45px;
+        font-size: 2rem;
     }
 
     .col-1 h2{
-        font-size: 20px;
+        font-size: 1.45rem;
+    }
+
+
+    .col-1{
+        padding-top: 10px;
+        flex-basis: 100%;
+        position: relative;
+        align-items: center;
+        transform: translateX(-30%);
+        height: 100vh;
     }
 
     .col-1::after{
         display: none;
     }
 
-    .row{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 50vh;
-    }
-
-    .col-1{
+    .col-2{
         flex-basis: 100%;
         position: relative;
-        margin: 10vw;
-    }
-
-    .word span:nth-child(6) {
-        display: block;
-    }
-
-    .word span:nth-child(6)::before {
-        content: "\A";
+        transform: translateX(0%);
+        height:100vh;
     }
     
+    .word{
+        margin: 0px;
+    }
+
+    button{
+        width: 150px;
+        border: 0;
+        padding: 0px;
+        color:#fff;
+        outline: none;
+        background:linear-gradient(to right,red, crimson);
+        border-radius: 10px;
+        cursor: pointer;
+        margin: 10px;
+    }
+
+    .title-card{
+        display: flex;
+        
+        justify-content: center;
+        padding: 0px;
+    }
 }
 
-/*About Page*/
+/*Title Card (for experiences)*/
+
+.row-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Ubuntu', sans-serif;
+    height: 20vh;
+    background-color: #000000dc;
+}
+
+.col-1{
+    flex-basis: 50%;
+    position: relative;
+    margin-left: 150px;
+}
+
+/*Title Card Type - 2*/
+.title-card{
+    display: flex;
+    justify-content: space-around;
+    min-height: 8vh;
+    background-color: #000000dc;
+    font-family: 'Ubuntu', sans-serif;
+    align-items: center;
+}
+
+/*Experience Type 1*/
+
+.timeline{
+    list-style: none;
+}
+.exp-1{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1em;
+  font-weight: 100;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  color: #fff;
+  background-color: rgb(27,27,27);
+}
+
+/* Layout */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Styling */
+.timeline {
+  margin: auto;
+  padding-top: 4em;
+  position: relative;
+  max-width: 80%;
+}
+
+.timeline:before {
+  background-color: white;
+  content: '';
+  margin-left: -1px;
+  position: absolute;
+  top: 0;
+  left: 2em;
+  width: 2px;
+  height: 100%;
+}
+
+.timeline-event {
+  position: relative;
+}
+.timeline-event:hover .timeline-event-icon {
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  background-color: crimson;
+}
+.timeline-event:hover .timeline-event-thumbnail {
+  -moz-box-shadow: inset 40em 0 0 0 crimson;
+  -webkit-box-shadow: inset 40em 0 0 0 crimson;
+  box-shadow: inset 40em 0 0 0 crimson;
+}
+
+.timeline-event-copy {
+  padding: 2em;
+  position: relative;
+  top: -1.875em;
+  left: 4em;
+  width: 80%;
+}
+.timeline-event-copy h3 {
+  font-size: 1.75em;
+}
+.timeline-event-copy h4 {
+  font-size: 1.2em;
+  margin-bottom: 1.2em;
+}
+.timeline-event-copy strong {
+  font-weight: 100;
+}
+.timeline-event-copy p:not(.timeline-event-thumbnail) {
+  padding-bottom: 1.2em;
+}
+
+.timeline-event-icon {
+  -moz-transition: -moz-transform 0.2s ease-in;
+  -o-transition: -o-transform 0.2s ease-in;
+  -webkit-transition: -webkit-transform 0.2s ease-in;
+  transition: transform 0.2s ease-in;
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background-color: white;
+  outline: 15px solid rgb(27,27,27);
+  display: block;
+  margin: 0.5em 0.5em 0.5em -0.5em;
+  position: absolute;
+  top: 0;
+  left: 2em;
+  width: 1em;
+  height: 1em;
+}
+
+.timeline-event-thumbnail {
+  -moz-transition: box-shadow 0.5s ease-in 0.1s;
+  -o-transition: box-shadow 0.5s ease-in 0.1s;
+  -webkit-transition: box-shadow 0.5s ease-in;
+  transition-delay: 0.1s;
+  transition: box-shadow 0.5s ease-in 0.1s;
+  color: black;
+  font-size: 1em;
+  background-color: aqua;
+  -moz-box-shadow: inset 0 0 0 0em red;
+  -webkit-box-shadow: inset 0 0 0 0em #ff0000;
+  box-shadow: inset 0 0 0 0em #ef795a;
+  display: inline-block;
+  margin-bottom: 1.2em;
+  padding: 0.25em 1em 0.2em 1em;
+}
