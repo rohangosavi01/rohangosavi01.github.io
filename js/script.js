@@ -47,6 +47,8 @@ spans.forEach((span, idx) => {
 	}, 250 * (idx+1))
 });
 
+
+
 //inspect element blocker
 //$(document).bind("contextmenu",function(e) {
  //   e.preventDefault();
@@ -58,9 +60,25 @@ spans.forEach((span, idx) => {
   //     }
  //  });
 
- /*!
- * Cursor Name.js
- * -- 90's cursors collection
- */
 
- 
+ const myTags = [
+    'JavaScript', 'CSS', 'HTML',
+    'C', 'C#', 'Adobe Photoshop',
+    'Python', 'MatPlotlib', 'NumPy',
+    'Pandas', 'VS Code', 'Canvas',
+    'Adobe Acrobat', 'Hindi', 'Marathi',
+];
+
+var tagCloud = TagCloud('.content', myTags,{
+
+  radius: 250,
+
+  maxSpeed: 'medium',
+  initSpeed: 'fast',
+
+  direction: 0,
+  
+  keep: true
+  
+});
+
