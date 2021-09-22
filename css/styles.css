@@ -938,7 +938,7 @@ footer{
     .row_a{
         display: flex;
         flex-direction: column;
-        min-height: 90vh;
+        min-height: 110vh;
         justify-content: center;
         align-items: center;
         margin: auto;
