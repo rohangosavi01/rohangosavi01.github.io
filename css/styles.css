@@ -5,7 +5,6 @@
     box-sizing: border-box;
 }
 
-
 /*Navigation Bar Styling for Desktop Screens*/
 nav{
     display: flex;
@@ -938,7 +937,7 @@ footer{
     .row_a{
         display: flex;
         flex-direction: column;
-        min-height: 110vh;
+        min-height: 90vh;
         justify-content: center;
         align-items: center;
         margin: auto;
