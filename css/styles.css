@@ -172,6 +172,18 @@ footer{
     color: black;
 }
 
+.alert{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    background-color: yellow;
+    color:black;
+}
+
+.alert h2 span{
+    font-size: 2rem;
+}
 
 
 /* home section styling */
@@ -980,6 +992,20 @@ footer{
     }
     .para_about{
         max-width: 85vw;
+    }
+
+    .alert{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 10vh;
+        background-color: yellow;
+        color:black;
+        font-size: 0.75rem;
+    }
+
+    .alert h2 span{
+        display: none;
     }
 
 }
