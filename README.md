@@ -2,7 +2,7 @@
 
 ## About
 
-Welcome to my portfolio website. This is my 'Hello World!' project :) 
+Welcome to my portfolio website. This is my ``` 'Hello World!' ``` project :) 
 
 ## Set-up 
 
