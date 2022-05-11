@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/cursor.css">
+</head>
+<body>
+    <!--------------Home--------------------------->
+    
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+    <header id="home">
+        
+        <div class="container container__header">
+
+            <h5>Hello, I'm</h5>
+            <h1>Rohan Gosavi</h1>
+            <h5 class="text-light">Full-Stack Developer Student</h5>
+
+            <div class="BBTA">
+            <a href="./assets/resume.pdf" target="_blank" rel="noopener noreferrer" class='btn'>Download Resume</a>
+            <a href="#contact" class='btn btn-primary'>Let's Talk</a>
+            </div>
+
+            <div class="header__socials">
+            <a href="https://linkedin.com/in/rohan01" target="_blank" rel="noopener noreferrer" class='btn'>
+                <img src="./assets/linkedin.png" alt='LinkedIn' style="width:2.5rem" /> </a>
+            
+            <a href="https://www.github.com/rohangosavi01" target="_blank" rel="noopener noreferrer" class='btn'>
+                <img src="./assets/github.png" alt='Github' style="width:2.5rem" /></a>
+            </div>
+
+
+        </div>
+
+        <div class="container container___header">
+            <span class="content"></span>
+            <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"> </script>
+
+        </div>
+
+
+    </header>
+
+<!--------------Navigation--------------------------->
+
+<div class="bbody">
+<div class="navigation">
+    <ul>
+        <li class="list active">
+            <a href="#home">
+                <span class="icon">
+                    <i class="fa fa-home" aria-hidden="true" style="font-size:30px"></i>
+                </span>
+                <span class="text">Home</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="#about">
+                <span class="icon">
+                    <i class="fa fa-user-circle" style="font-size:30px"></i>
+                </span>
+                <span class="text">About</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="#projects">
+                <span class="icon">
+                    <i class="fa fa-code" style="font-size:30px"></i>
+                </span>
+                <span class="text">Projects</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="#contact">
+                <span class="icon">
+                    <i class="fa fa-comments-o" style="font-size:30px"></i>
+                </span>
+                <span class="text">Contact</span>
+            </a>
+        </li>
+        <div class="indicator"></div>
+    </ul>
+</div>
+</div>
+
+<!------------------About Section--------------------------->
+
+
+
+    <div class="about" id="about">
+        This is about section
+    </div>
+
+    <div class="exp" id="projects">
+        This is exp/projects section
+    </div>
+
+    <div class="contact" id="contact">
+        This is contact section
+    </div>
+
+    <div class="footer">
+        Production Server - Footer
+    </div>
+
+    
+
+    <script>
+        const list = document.querySelectorAll('.list');
+        function activeLink() {
+            list.forEach((item) =>
+                item.classList.remove('active'));
+            this.classList.add('active');
+        }
+
+        list.forEach((item) =>
+            item.addEventListener('click', activeLink))
+
+        const myTags = [
+            'JavaScript', 'CSS', 'HTML', 'Python', 'C',
+            'SQL', 'MySQL', 'SQLite3',
+            'Flask', 'Jinja','React', 'RestAPI', 'MatPlotlib', 'NumPy',
+            'Pandas', 'VS Code', 'Git', 'GitHub'
+        ];
+
+        var tagCloud = TagCloud('.content', myTags, {
+
+            radius: 200,
+            maxSpeed: 'slow',
+            initSpeed: 'fast',
+            direction: 135,
+
+            keep: true
+
+        });
+
+        const cursor = document.querySelector('.cursor');
+
+        document.addEventListener('mousemove', e => {
+            cursor.setAttribute("style", "top: " + (e.pageY) + "px; left: " + (e.pageX) + "px;")
+        })
+
+        const cursor2 = document.querySelector('.cursor2');
+
+        document.addEventListener('mousemove', e => {
+            cursor2.setAttribute("style", "top: " + (e.pageY) + "px; left: " + (e.pageX) + "px;")
+        })
+
+
+        document.addEventListener('click', () => {
+            cursor.classList.add("expand");
+
+            setTimeout(() => {
+                cursor.classList.remove("expand");
+            }, 500)
+        })
+    
+    </script>
+    
+</body>
+
+</html>
