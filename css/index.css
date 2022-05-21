@@ -139,12 +139,24 @@ img{
     }
 
 }
+/*================= Construction ==================*/
+
+.construction{
+    border: 5px solid #FFFF00;
+    background-color:#FFFF00;
+    color: black;
+    border-width: 10px;
+    height: auto;
+    width: 80vw;
+    margin: auto;
+    text-align: center;
+}
 
 /*================= Header ==================*/
 
 header {
     height: 100vh;
-    padding-top: 10vh;
+    padding-top: 5vh;
     overflow: hidden;
 }
 
