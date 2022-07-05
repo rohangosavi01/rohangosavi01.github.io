@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohan Gosavi's Profile</title>
+    <link rel="icon" href="https://img.icons8.com/color/48/000000/contact-card.png" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+        :root{
+            --background: #141414ff ;
+            --background1: #373737ff;
+            --backgroundlines: #b7d0f1ff ;
+            --colorpop: #f2564fff;
+            --fontcolor: #faa549ff;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+        font-family: 'Open Sans', sans-serif;
+        color: aliceblue;
+        background-color: var(--background);
+        padding: 0;
+        margin: 0;
+        }
+
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100vw;
+            height: auto;
+            margin-bottom: 2vh;
+            margin-top: 2vh;
+        }
+
+        .box-1{
+            display: flex;
+            justify-content: center;
+            background-color: black;
+            height: 20vh;
+            width: 95vw;
+            min-height: 200px;
+            border-radius: 10px;
+            border: 0.5vw solid var(--backgroundlines);
+            z-index: 100;
+        }
+
+        .box-1 img{
+
+            width: 94vw;
+            z-index: 400;
+            border-radius: 10px;
+            object-fit: cover;
+            
+        }
+
+        .box-2{
+            margin-top: -10px;
+            padding-top: 20px;       
+            font-weight: 800;
+            /*background-color: rgb(29,30,34);*/
+            background-color: var(--background1);
+            color: var(--fontcolor);
+            background-position: center;
+            background-size: auto;
+            background-size: auto;
+            height: 15vh;
+            width: 95vw;
+            border-radius: 0 0 10px 10px;
+            position:center;
+            border: 0.5vw solid var(--background1)
+            ;
+            padding-left: 10px;
+        }
+
+        .box-2 h3{
+            font-weight: 600;
+        }
+
+        .box-3{
+            display: flex;
+            justify-content: center;
+            max-height: 200px;
+
+        }
+        
+        .box-3 img{
+            height: 35vw;
+            width: 35vw;
+            max-height: 200px;
+            max-width: 200px;
+            border-radius: 50%;
+            border: 0.5vw solid var(--backgroundlines);
+            margin-top: -32vh;
+            margin-left: -55vw;
+            z-index: 500;
+
+
+        }
+
+        .container2{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 2vw;
+            align-items: center;
+            width: 100vw;
+            height: auto;
+            margin-bottom: 2vh;
+            background-color: #505050ff;
+        }
+
+        .resume_open {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 7vh;
+            width: 77vw;
+            border-radius: 10px;
+            background-color: rgb(60, 78, 98);
+            font-weight: 600;
+        }
+
+        .resume_download {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 7vh;
+            width: 16vw;
+            border-radius: 10px;
+            background-color: rgb(60, 78, 98);
+            font-weight: 600;
+        }
+        
+        .resume_download img{
+            height: 7vh;
+            width: 10vw;
+            border-radius: 50%;
+            border: 0.5vw solid rgb(60, 78, 98);
+            z-index: 500;
+        }
+
+        .container3{
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: center;
+            background-color: var(--colorpop);
+            gap: 2vw;
+            border-radius: 10px;
+            margin-left: 2.5vw;
+            margin-right: 2.5vw;
+            height: 7vh;
+            margin-bottom: 1.5vh;
+        }
+
+        .contact_card_png img{
+            max-height: 50px;
+        }
+
+        .container5{
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: var(--background1);
+            gap: 2vw;
+            border-radius: 10px;
+            margin-left: 10vw;
+            margin-right: 2.5vw;
+            height: 7.5vh;
+            margin-bottom: 1.5vh; 
+     
+        }
+
+        .icon{    
+            display: flex;    
+            overflow: hidden;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+
+            height: 14vw;
+            width: 14vw;
+            margin-left: -7vw ;
+            max-height: 75px;
+            max-width: 75px;   
+
+        }
+        
+        .icon img{
+            display: flex;
+            height: 14vw;
+            border-radius: 50%;
+            max-height: 75px;
+            max-width: 75px; 
+
+        }
+
+        .icon_text{
+            flex-grow: 2;
+            display: flex;
+            width: 50vw;
+
+        }
+
+        .icon_text a{
+            text-decoration: none;
+        }
+
+        .icon_text h3{
+            color: white;
+            font-weight: 700;
+        }
+
+        .icon_text h4{
+            color: rgb(158, 164, 173);
+            font-weight: 600;
+        }
+
+        .arrow{
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            margin-left: -4vw;
+
+        }
+        
+        .arrow img{
+            max-height: 40px;
+        }
+
+        a.fill-div {
+            display: block;
+            height: 100%;
+            width: 100%;
+            text-decoration: none;
+        }
+
+
+    </style>
+</head>
+
+
+<body>
+
+    <div class="container">
+        
+        <div class="box-1">
+            <img src="./assets/image1.jpg" alt="backdrop">
+        </div>
+        
+        <div class="box-2">
+            <h2>Rohan Gosavi</h2>
+            <h3>Computer Science Student</h3>
+        </div>
+    </div>
+
+
+    <div class="box-3">
+        <img src="./assets/wa.jpg" alt="photo">
+    </div>
+
+   <!--- <div class="container3">
+        <div class="contact_card_text">
+            <h4>Download Contact Card</h4>
+        </div>
+    
+        <div class="contact_card_png">
+            <a href="./assets/RohanGosavi_Resume.pdf" download="RohanGosaviResume" title="RohanGosaviResume">
+                <img src="https://img.icons8.com/stickers/100/000000/business-contact.png" alt="Contact Card" />
+            </a>
+        </div>
+    
+    </div>-->
+
+    <div class="container3">
+        <div class="contact_card_text">
+            <h4>Download Contact Card</h4>
+        </div>
+
+        <div class="contact_card_png">
+            <a href="./assets/RohanGosavi_Resume.pdf" download="RohanGosaviResume" title="RohanGosaviResume">
+                <img src="https://img.icons8.com/dotty/80/FFFFFF/contact-card.png" />
+            </a>
+        </div>
+    </div>
+
+
+    <div class="container5" >
+    
+        <div class="icon">
+            <a href="tel:+15126989784" class="fill-div">
+                <img src="./assets/ios/white/phone.jpg" />
+            </a>
+        </div>
+    
+        <div class="icon_text">
+    
+            <a href="tel:+15126989784" class="fill-div">
+                <h3>Call Me</h3>
+                <h4>+15126989784</h4>
+            </a>
+    
+        </div>
+    
+        <div class="arrow">
+            <a href="tel:+15126989784" class="fill-div">
+            <img src="https://img.icons8.com/ios-filled/100/FFFFFF/right--v1.png" />
+            </a>
+        </div>
+    
+    </div>
+
+    <div class="container5">
+        
+        <div class="icon">
+            <a href="https://www.rohangosavi.com/" class="fill-div">
+                <img src="./assets/ios/white/safari.jpg" />
+            </a>
+        </div>
+
+        <div class="icon_text">
+
+            <a href="https://www.rohangosavi.com/" class="fill-div">
+                <h3>Portfolio Website</h3>
+                <h4>www.rohangosavi.com</h4>
+            </a>
+            
+        </div>
+
+        <div class="arrow">
+            <a href="https://www.rohangosavi.com/" class="fill-div">
+                <img src="https://img.icons8.com/ios-filled/100/FFFFFF/right--v1.png" />
+            </a>
+
+        </div>
+    
+    </div>
+
+    <div class="container5">
+    
+        <div class="icon">
+            <a href="https://www.linkedin.com/in/rohan01/" class="fill-div">
+            <img src="./assets/ios/white/linkedin.jpg" />
+            </a>
+        </div>
+    
+        <div class="icon_text">
+    
+            <a href="https://www.linkedin.com/in/rohan01/" class="fill-div">
+                <h3>LinkedIn</h3>
+                <h4>@rohan01</h4>
+            </a>
+    
+        </div>
+    
+        <div class="arrow">
+            <a href="https://www.linkedin.com/in/rohan01/" class="fill-div">
+            <img src="https://img.icons8.com/ios-filled/100/FFFFFF/right--v1.png" />
+            </a>
+        </div>
+    
+    </div>
+
+    <div class="container5">
+    
+        <div class="icon">
+            <a href="mailto:rohangosavi01@gmail.com" class="fill-div">
+            <img src="./assets/ios/white/mail.jpg" />
+            </a>
+        </div>
+    
+        <div class="icon_text">
+    
+            <a href="mailto:rohangosavi01@gmail.com" class="fill-div">
+                <h3>Email Me</h3>
+                <h4>rohangosavi01@gmail.com</h4>
+            </a>
+
+    
+        </div>
+    
+        <div class="arrow">
+            <a href="mailto:rohangosavi01@gmail.com" class="fill-div">
+            <img src="https://img.icons8.com/ios-filled/100/FFFFFF/right--v1.png" />
+            </a>
+        </div>
+    
+    </div>
+    
+</body>
+
+</html>
